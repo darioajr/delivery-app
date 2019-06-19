@@ -1,0 +1,34 @@
+{
+  "backofficeApp": {
+    "motoboy": {
+      "home": {
+        "title": "Motoboys",
+        "createLabel": "Criar novo Motoboy",
+        "createOrEditLabel": "Criar ou editar Motoboy"
+      },
+      "created": "Um novo Motoboy foi criado com o identificador {{ param }}",
+      "updated": "Um Motoboy foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Motoboy foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Motoboy {{ id }}?"
+      },
+      "detail": {
+        "title": "Motoboy"
+      },
+      "nome": "Nome",
+      "sobrenome": "Sobrenome",
+      "cnh": "Cnh",
+      "placa": "Placa",
+      "email": "Email",
+      "contato": "Contato",
+      "endereco": "Endereco",
+      "enderecoNumero": "Endereco Numero",
+      "enderecoComplemento": "Endereco Complemento",
+      "enderecoBairro": "Endereco Bairro",
+      "cep": "Cep",
+      "status": "Status",
+      "data": "Data",
+      "cidade": "Cidade"
+    }
+  }
+}

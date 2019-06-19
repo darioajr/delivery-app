@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.senior.fsw.mboy"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "microservice",
+    "baseName": "ride",
+    "packageName": "com.senior.fsw.mboy",
+    "packageFolder": "com/senior/fsw/mboy",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YmZmMDI0ZTJhMGU1M2NhYTljNTk4YmIwYWNkNjdlZGZkMDZhZTY4MmQ3OWFmODliNTE2MThmMTg2NWMyYTY0OTIyYTVlMzVjNTMwOGYzMWRmM2I2ZWVlYjExM2Y1YWNkZTk4MDEzNGQ0NTA2ZWUzOWJmZGQ0OTkwZjFkZWQ5ZTM=",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

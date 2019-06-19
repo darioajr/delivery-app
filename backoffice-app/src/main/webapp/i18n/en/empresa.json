@@ -1,0 +1,35 @@
+{
+  "backofficeApp": {
+    "empresa": {
+      "home": {
+        "title": "Empresas",
+        "createLabel": "Create a new Empresa",
+        "createOrEditLabel": "Create or edit a Empresa"
+      },
+      "created": "A new Empresa is created with identifier {{ param }}",
+      "updated": "A Empresa is updated with identifier {{ param }}",
+      "deleted": "A Empresa is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Empresa {{ id }}?"
+      },
+      "detail": {
+        "title": "Empresa"
+      },
+      "nome": "Nome",
+      "razaoSocial": "Razao Social",
+      "nomeFanstasia": "Nome Fanstasia",
+      "cnpj": "Cnpj",
+      "email": "Email",
+      "contato": "Contato",
+      "status": "Status",
+      "recargaPendente": "Recarga Pendente",
+      "possuiBau": "Possui Bau",
+      "endereco": "Endereco",
+      "enderecoNumero": "Endereco Numero",
+      "enderecoComplemento": "Endereco Complemento",
+      "enderecoBairro": "Endereco Bairro",
+      "cep": "Cep",
+      "cidade": "Cidade"
+    }
+  }
+}

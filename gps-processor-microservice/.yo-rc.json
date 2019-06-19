@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.senior.fsw.mboy"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "microservice",
+    "baseName": "gpsprocessor",
+    "packageName": "com.senior.fsw.mboy",
+    "packageFolder": "com/senior/fsw/mboy",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Y2I3Y2I2Y2ZiMWM4NjE1ZjdhZThmMWUwYTMwYzE1MDhlMGJhZDYxOWQ2MmIwYmM4OWVmMGZjZGQ5OGY3MzRkZGJiZjJjMDUwZDdhNjBhYTA3MWVlNDY0MzdmN2RjZDEwODMyYjAxMzhkYTUxY2ExZjFkYzBkNWI2YWU3Nzc0NTE=",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

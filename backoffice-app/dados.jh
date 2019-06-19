@@ -1,0 +1,65 @@
+entity Cliente {
+	nome String required,
+    sobrenome String required,
+    email String required,
+    contato String required,
+    status String required,
+    data LocalDate required
+}
+
+entity Motoboy {
+	nome String required,
+    sobrenome String required,
+    cnh String required,
+    placa String required,
+    email String required,
+    contato String required,
+    endereco String required,
+    enderecoNumero String required,
+    enderecoComplemento String required,
+    enderecoBairro String required,
+    cep String required,
+    status String required,
+    data LocalDate required
+
+}
+
+entity Empresa {
+	nome String required,
+    razaoSocial String required,
+    nomeFanstasia String,
+    cnpj String required,
+    email String required,
+    contato String required,
+    status String required,
+    recargaPendente String required
+    possuiBau String required,
+    endereco String required,
+    enderecoNumero String required,
+    enderecoComplemento String required,
+    enderecoBairro String required,
+    cep String required
+}
+
+entity Cidade {
+	nome String required,
+    estado SiglaEstado
+}
+
+relationship OneToOne {
+  Empresa to Cidade
+}
+
+relationship OneToOne {
+  Motoboy to Cidade
+}
+
+enum SiglaEstado {
+    AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
+}
+
+paginate * with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl

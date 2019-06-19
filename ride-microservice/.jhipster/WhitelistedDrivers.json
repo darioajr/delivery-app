@@ -1,0 +1,23 @@
+{
+    "name": "WhitelistedDrivers",
+    "fields": [
+        {
+            "fieldName": "driver",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190606001737",
+    "entityTableName": "whitelisted_drivers",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ride",
+    "applications": "*",
+    "microserviceName": "ride"
+}

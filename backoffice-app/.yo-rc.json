@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.senior.fsw.mboy",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "gateway",
+    "baseName": "backoffice",
+    "packageName": "com.senior.fsw.mboy",
+    "packageFolder": "com/senior/fsw/mboy",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWU0NTY3OThlZWNlNjU3N2JiMTU0NTE2Y2Y1OGQ1NDI3ZDMwYjUxOGY3OGIwY2I3MmE4ZWE4OTRkODliMzM3NTE4YTJlZDhmMGZlMTNhMGY1NmJiNGMyNGY2MGUyYjIyOTAxMzI3NjI5ZDAyZjNjMWVjZTFiOTllMTljY2EyYzE=",
+    "clientFramework": "angularX",
+    "clientTheme": "journal",
+    "clientThemeVariant": "primary",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": ["pt-br", "en"]
+  }
+}

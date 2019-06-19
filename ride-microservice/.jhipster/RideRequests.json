@@ -1,0 +1,27 @@
+{
+    "name": "RideRequests",
+    "fields": [
+        {
+            "fieldName": "driver",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "passenger",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190606001736",
+    "entityTableName": "ride_requests",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ride",
+    "applications": "*",
+    "microserviceName": "ride"
+}

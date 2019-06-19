@@ -1,0 +1,11 @@
+entity GPSProcessor {
+	lat BigDecimal,
+    lng BigDecimal,
+    ride String
+}
+
+paginate GPSProcessor with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl

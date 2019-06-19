@@ -1,0 +1,32 @@
+entity CompletedRides {
+	ride String required,
+	driver String required,
+    passenger String required,
+    startTime Long required
+    endTime Long required
+}
+
+entity RideConfirmations {
+	passenger String required,
+    driver String required
+}
+
+entity RideRequests {
+	driver String,
+	passenger String required
+}
+
+entity WhitelistedDrivers {
+	driver String required
+}
+
+entity WhitelistedRiders {
+	passanger String required
+}
+
+
+paginate * with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl

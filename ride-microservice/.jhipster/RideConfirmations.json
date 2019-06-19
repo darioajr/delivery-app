@@ -1,0 +1,30 @@
+{
+    "name": "RideConfirmations",
+    "fields": [
+        {
+            "fieldName": "passenger",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "driver",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190606001735",
+    "entityTableName": "ride_confirmations",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ride",
+    "applications": "*",
+    "microserviceName": "ride"
+}

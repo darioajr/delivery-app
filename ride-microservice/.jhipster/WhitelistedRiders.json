@@ -1,0 +1,23 @@
+{
+    "name": "WhitelistedRiders",
+    "fields": [
+        {
+            "fieldName": "passanger",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190606001738",
+    "entityTableName": "whitelisted_riders",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ride",
+    "applications": "*",
+    "microserviceName": "ride"
+}

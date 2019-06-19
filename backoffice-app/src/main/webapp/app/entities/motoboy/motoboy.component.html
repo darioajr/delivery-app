@@ -1,0 +1,92 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="backofficeApp.motoboy.home.title">Motoboys</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-motoboy" [routerLink]="['/motoboy/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="backofficeApp.motoboy.home.createLabel">
+            Create new Motoboy
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="motoboys">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nome"><span jhiTranslate="backofficeApp.motoboy.nome">Nome</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sobrenome"><span jhiTranslate="backofficeApp.motoboy.sobrenome">Sobrenome</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cnh"><span jhiTranslate="backofficeApp.motoboy.cnh">Cnh</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="placa"><span jhiTranslate="backofficeApp.motoboy.placa">Placa</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="email"><span jhiTranslate="backofficeApp.motoboy.email">Email</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="contato"><span jhiTranslate="backofficeApp.motoboy.contato">Contato</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="endereco"><span jhiTranslate="backofficeApp.motoboy.endereco">Endereco</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enderecoNumero"><span jhiTranslate="backofficeApp.motoboy.enderecoNumero">Endereco Numero</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enderecoComplemento"><span jhiTranslate="backofficeApp.motoboy.enderecoComplemento">Endereco Complemento</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enderecoBairro"><span jhiTranslate="backofficeApp.motoboy.enderecoBairro">Endereco Bairro</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cep"><span jhiTranslate="backofficeApp.motoboy.cep">Cep</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="status"><span jhiTranslate="backofficeApp.motoboy.status">Status</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="data"><span jhiTranslate="backofficeApp.motoboy.data">Data</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cidadeId"><span jhiTranslate="backofficeApp.motoboy.cidade">Cidade</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let motoboy of motoboys ;trackBy: trackId">
+                <td><a [routerLink]="['/motoboy', motoboy.id, 'view' ]">{{motoboy.id}}</a></td>
+                <td>{{motoboy.nome}}</td>
+                <td>{{motoboy.sobrenome}}</td>
+                <td>{{motoboy.cnh}}</td>
+                <td>{{motoboy.placa}}</td>
+                <td>{{motoboy.email}}</td>
+                <td>{{motoboy.contato}}</td>
+                <td>{{motoboy.endereco}}</td>
+                <td>{{motoboy.enderecoNumero}}</td>
+                <td>{{motoboy.enderecoComplemento}}</td>
+                <td>{{motoboy.enderecoBairro}}</td>
+                <td>{{motoboy.cep}}</td>
+                <td>{{motoboy.status}}</td>
+                <td>{{motoboy.data | date:'mediumDate'}}</td>
+                <td>
+                    <div *ngIf="motoboy.cidadeId">
+                        <a [routerLink]="['../cidade', motoboy.cidadeId , 'view' ]" >{{motoboy.cidadeId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/motoboy', motoboy.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/motoboy', motoboy.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'motoboy', { outlets: { popup: motoboy.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="motoboys && motoboys.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

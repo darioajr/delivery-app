@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-cidade-heading" jhiTranslate="backofficeApp.cidade.home.createOrEditLabel">Create or edit a Cidade</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!cidade.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="backofficeApp.cidade.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                           formControlName="nome"/>
+                    <div *ngIf="editForm.get('nome').invalid && (editForm.get('nome').dirty || editForm.get('nome').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nome').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="backofficeApp.cidade.estado" for="field_estado">Estado</label>
+                    <select class="form-control" name="estado" formControlName="estado" id="field_estado">
+                        <option value="AC">{{'backofficeApp.SiglaEstado.AC' | translate}}</option>
+                        <option value="AL">{{'backofficeApp.SiglaEstado.AL' | translate}}</option>
+                        <option value="AP">{{'backofficeApp.SiglaEstado.AP' | translate}}</option>
+                        <option value="AM">{{'backofficeApp.SiglaEstado.AM' | translate}}</option>
+                        <option value="BA">{{'backofficeApp.SiglaEstado.BA' | translate}}</option>
+                        <option value="CE">{{'backofficeApp.SiglaEstado.CE' | translate}}</option>
+                        <option value="DF">{{'backofficeApp.SiglaEstado.DF' | translate}}</option>
+                        <option value="ES">{{'backofficeApp.SiglaEstado.ES' | translate}}</option>
+                        <option value="GO">{{'backofficeApp.SiglaEstado.GO' | translate}}</option>
+                        <option value="MA">{{'backofficeApp.SiglaEstado.MA' | translate}}</option>
+                        <option value="MT">{{'backofficeApp.SiglaEstado.MT' | translate}}</option>
+                        <option value="MS">{{'backofficeApp.SiglaEstado.MS' | translate}}</option>
+                        <option value="MG">{{'backofficeApp.SiglaEstado.MG' | translate}}</option>
+                        <option value="PA">{{'backofficeApp.SiglaEstado.PA' | translate}}</option>
+                        <option value="PB">{{'backofficeApp.SiglaEstado.PB' | translate}}</option>
+                        <option value="PR">{{'backofficeApp.SiglaEstado.PR' | translate}}</option>
+                        <option value="PE">{{'backofficeApp.SiglaEstado.PE' | translate}}</option>
+                        <option value="PI">{{'backofficeApp.SiglaEstado.PI' | translate}}</option>
+                        <option value="RJ">{{'backofficeApp.SiglaEstado.RJ' | translate}}</option>
+                        <option value="RN">{{'backofficeApp.SiglaEstado.RN' | translate}}</option>
+                        <option value="RS">{{'backofficeApp.SiglaEstado.RS' | translate}}</option>
+                        <option value="RO">{{'backofficeApp.SiglaEstado.RO' | translate}}</option>
+                        <option value="RR">{{'backofficeApp.SiglaEstado.RR' | translate}}</option>
+                        <option value="SC">{{'backofficeApp.SiglaEstado.SC' | translate}}</option>
+                        <option value="SP">{{'backofficeApp.SiglaEstado.SP' | translate}}</option>
+                        <option value="SE">{{'backofficeApp.SiglaEstado.SE' | translate}}</option>
+                        <option value="TO">{{'backofficeApp.SiglaEstado.TO' | translate}}</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

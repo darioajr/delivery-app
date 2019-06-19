@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="motoboy">
+            <h2><span jhiTranslate="backofficeApp.motoboy.detail.title">Motoboy</span> {{motoboy.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="backofficeApp.motoboy.nome">Nome</span></dt>
+                <dd>
+                    <span>{{motoboy.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.sobrenome">Sobrenome</span></dt>
+                <dd>
+                    <span>{{motoboy.sobrenome}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.cnh">Cnh</span></dt>
+                <dd>
+                    <span>{{motoboy.cnh}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.placa">Placa</span></dt>
+                <dd>
+                    <span>{{motoboy.placa}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.email">Email</span></dt>
+                <dd>
+                    <span>{{motoboy.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.contato">Contato</span></dt>
+                <dd>
+                    <span>{{motoboy.contato}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.endereco">Endereco</span></dt>
+                <dd>
+                    <span>{{motoboy.endereco}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.enderecoNumero">Endereco Numero</span></dt>
+                <dd>
+                    <span>{{motoboy.enderecoNumero}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.enderecoComplemento">Endereco Complemento</span></dt>
+                <dd>
+                    <span>{{motoboy.enderecoComplemento}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.enderecoBairro">Endereco Bairro</span></dt>
+                <dd>
+                    <span>{{motoboy.enderecoBairro}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.cep">Cep</span></dt>
+                <dd>
+                    <span>{{motoboy.cep}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.status">Status</span></dt>
+                <dd>
+                    <span>{{motoboy.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.data">Data</span></dt>
+                <dd>
+                    <span>{{motoboy.data}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.motoboy.cidade">Cidade</span></dt>
+                <dd>
+                    <div *ngIf="motoboy.cidadeId">
+                        <a [routerLink]="['/cidade', motoboy.cidadeId, 'view']">{{motoboy.cidadeId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/motoboy', motoboy.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

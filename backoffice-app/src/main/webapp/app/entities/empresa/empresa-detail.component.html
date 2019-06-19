@@ -1,0 +1,85 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="empresa">
+            <h2><span jhiTranslate="backofficeApp.empresa.detail.title">Empresa</span> {{empresa.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="backofficeApp.empresa.nome">Nome</span></dt>
+                <dd>
+                    <span>{{empresa.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.razaoSocial">Razao Social</span></dt>
+                <dd>
+                    <span>{{empresa.razaoSocial}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.nomeFanstasia">Nome Fanstasia</span></dt>
+                <dd>
+                    <span>{{empresa.nomeFanstasia}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.cnpj">Cnpj</span></dt>
+                <dd>
+                    <span>{{empresa.cnpj}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.email">Email</span></dt>
+                <dd>
+                    <span>{{empresa.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.contato">Contato</span></dt>
+                <dd>
+                    <span>{{empresa.contato}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.status">Status</span></dt>
+                <dd>
+                    <span>{{empresa.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.recargaPendente">Recarga Pendente</span></dt>
+                <dd>
+                    <span>{{empresa.recargaPendente}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.possuiBau">Possui Bau</span></dt>
+                <dd>
+                    <span>{{empresa.possuiBau}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.endereco">Endereco</span></dt>
+                <dd>
+                    <span>{{empresa.endereco}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.enderecoNumero">Endereco Numero</span></dt>
+                <dd>
+                    <span>{{empresa.enderecoNumero}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.enderecoComplemento">Endereco Complemento</span></dt>
+                <dd>
+                    <span>{{empresa.enderecoComplemento}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.enderecoBairro">Endereco Bairro</span></dt>
+                <dd>
+                    <span>{{empresa.enderecoBairro}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.cep">Cep</span></dt>
+                <dd>
+                    <span>{{empresa.cep}}</span>
+                </dd>
+                <dt><span jhiTranslate="backofficeApp.empresa.cidade">Cidade</span></dt>
+                <dd>
+                    <div *ngIf="empresa.cidadeId">
+                        <a [routerLink]="['/cidade', empresa.cidadeId, 'view']">{{empresa.cidadeId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/empresa', empresa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

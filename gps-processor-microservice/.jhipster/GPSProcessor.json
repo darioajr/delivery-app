@@ -1,0 +1,28 @@
+{
+    "name": "GPSProcessor",
+    "fields": [
+        {
+            "fieldName": "lat",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "lng",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "ride",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190605050255",
+    "entityTableName": "gps_processor",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "gpsprocessor",
+    "applications": "*",
+    "microserviceName": "gpsprocessor"
+}
